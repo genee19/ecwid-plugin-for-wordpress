@@ -73,7 +73,7 @@ function show_ecwid($params) {
         $ecwid_product_id = intval($wp_query->query_vars['ecwid_product_id']);
         $ecwid_category_id = intval($wp_query->query_vars['ecwid_category_id']);
         if (!empty($ecwid_product_id)) {
-            $ecwid_open_product = '<script> if (!document.location.hash) document.location.hash = "ecwid:mode=product&product=' . intval($_GET['ecwid_product_id']) . '";</script>';
+            $ecwid_open_product = '<script> if (!document.location.hash) document.location.hash = "ecwid:mode=product&product=' . intval($ecwid_product_id) . '";</script>';
         } elseif (!empty($ecwid_category_id)) {
             $ecwid_default_category_id = intval($ecwid_category_id);
         }
